@@ -1,0 +1,360 @@
+﻿
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Siti Rosidah</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5fffc;
+            color: #333333d6;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffff;
+            box-shadow: 0 2px 10px #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav h2 {
+            color: #ad444e;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: #8e44ad;
+        }
+
+        /* HOME */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            gap: 40px;
+            background: linear-gradient(135deg, #f8f5ff, #fce4ec);
+        }
+
+        .home-text {
+            max-width: 550px;
+        }
+
+        .home-text h3 {
+            color: #8e44ad;
+            font-size: 22px;
+        }
+
+        .home-text h1 {
+            font-size: 45px;
+            margin: 15px 0;
+        }
+
+        .home-text p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #8e44ad;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #6c3483;
+            transform: translateY(-3px);
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 8px solid white;
+            box-shadow: 0 5px 25px #c9a5e0;
+        }
+
+        /* SECTION */
+        section {
+            padding: 70px 10%;
+        }
+
+        .judul {
+            text-align: center;
+            color: #8e44ad;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        /* TENTANG */
+        .tentang {
+            text-align: center;
+            line-height: 1.9;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        /* KEAHLIAN */
+        .skill-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            background: white;
+            padding: 30px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px #e3d5ed;
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill h3 {
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        /* PROYEK */
+        .project-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px #e3d5ed;
+        }
+
+        .project img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .project-info {
+            padding: 20px;
+        }
+
+        .project-info h3 {
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        .project-info p {
+            line-height: 1.6;
+        }
+
+        /* KONTAK */
+        .kontak {
+            text-align: center;
+            background: #eee3f8;
+        }
+
+        .kontak p {
+            margin: 15px 0 25px;
+        }
+
+        footer {
+            background: #6c3483;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .home {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .home-text h1 {
+                font-size: 32px;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .skill-container,
+            .project-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <h2>Portofolio</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#skill">Keahlian</a></li>
+            <li><a href="#proyek">Proyek</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME -->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h3>Halo, selamat datang!</h3>
+            <h1> Saya Siti Rosidah</h1>
+            <p>
+                Saya seorang pelajar yang tertarik dengan dunia
+                teknologi, desain, dan pemrograman web.
+                Saya senang belajar hal baru dan mengembangkan
+                kemampuan di bidang teknologi.
+            </p>
+            <a href="#tentang" class="btn">Kenali Saya</a>
+        </div>
+
+        <div>
+            <img src="foto-siti-rosidah.png" alt="Foto Siti Rosidah"
+                 class="profile-img">
+        </div>
+    </section>
+
+    <!-- TENTANG SAYA -->
+    <section id="tentang">
+        <h2 class="judul">Tentang Saya</h2>
+        <div class="tentang">
+            <p>
+                Perkenalkan, nama saya Siti Rosidah.
+                Saya adalah pelajar yang sedang mempelajari
+                HTML, CSS, dan teknologi digital.
+                Saya memiliki semangat untuk terus belajar,
+                berkreasi, serta membuat karya yang menarik
+                dan bermanfaat.
+            </p>
+        </div>
+    </section>
+
+    <!-- KEAHLIAN -->
+    <section id="skill">
+        <h2 class="judul">Keahlian Saya</h2>
+
+        <div class="skill-container">
+            <div class="skill">
+                <h3>ðŸ’» HTML</h3>
+                <p>Membuat struktur halaman website.</p>
+            </div>
+
+            <div class="skill">
+                <h3>ðŸŽ¨ CSS</h3>
+                <p>Mendesain tampilan website agar menarik.</p>
+            </div>
+
+            <div class="skill">
+                <h3>ðŸ–Œï¸ Desain</h3>
+                <p>Membuat desain kreatif dan menarik.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROYEK -->
+    <section id="proyek">
+        <h2 class="judul">Proyek Saya</h2>
+
+        <div class="project-container">
+            <div class="project">
+                <div class="project-info">
+                    <h3>Website Pribadi</h3>
+                    <p>
+                        Website sederhana yang dibuat menggunakan
+                        HTML dan CSS untuk menampilkan informasi
+                        tentang diri saya.
+                    </p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="proyek2.jpg"
+                     alt="Proyek desain">
+                <div class="project-info">
+                    <h3>Desain Kreatif</h3>
+                    <p>
+                        Karya desain sebagai latihan untuk
+                        meningkatkan kreativitas dan kemampuan
+                        desain digital.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK -->
+    <section class="kontak" id="kontak">
+        <h2 class="judul">Hubungi Saya</h2>
+        <p>Terima kasih telah mengunjungi portofolio saya!</p>
+
+        <a href="mailto:emailkamu@gmail.com" class="btn">
+            Kirim Email
+        </a>
+    </section>
+https://release-assets.githubusercontent.com/github-production-release-asset/1212958625/1d043be4-97e3-40d2-a7bb-3778aa31a97f?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-23T11%3A13%3A04Z&rscd=attachment%3B+filename%3DGitHub-Copilot-windows-x64-setup.exe&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-23T10%3A12%3A13Z&ske=2026-10-23T11%3A13%3A04Z&sks=b&skv=2018-11-09&sig=Vi42faVMlA47lWOWyw9qOvr2JfGW4GiYMI3P0S0t%2F7M%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5Mjc1NDIwNCwibmJmIjoxNzkyNzUwNjA0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.8q6LHKGwI4BX3gLBVU_jvWQz2yr0OxzAmBEEu6Ob4RY&response-content-disposition=attachment%3B%20filename%3DGitHub-Copilot-windows-x64-setup.exe&response-content-type=application%2Foctet-stream
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Siti Rosidah. Semua Hak Dilindungi.</p>
+    </footer>
+
+</body>
+</html>
+
